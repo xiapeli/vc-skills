@@ -1,0 +1,31 @@
+{
+  "name": "vc-skills",
+  "version": "1.0.0",
+  "description": "Install VC investor personas as AI skills for Claude Code, Cursor, and more",
+  "author": "xiapeli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiapeli/vc-skills.git"
+  },
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "ai-skills",
+    "claude-code",
+    "cursor",
+    "investor",
+    "prompt-engineering"
+  ],
+  "bin": {
+    "vc-skills": "bin/vc-skills.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

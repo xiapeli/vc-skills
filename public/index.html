@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VC Skills — Pitch to AI VCs Before You Pitch for Real</title>
-<meta name="description" content="22 simulation skills that make AI assistants behave like real VC partners. Sequoia, a16z, YC, Benchmark, and 18 more. Based on 100+ real sources.">
+<meta name="description" content="28 simulation skills that make AI assistants behave like real VC partners. Sequoia, a16z, YC, Benchmark, Paradigm, and more. Based on 100+ real sources.">
 <meta property="og:title" content="VC Skills — Simulate Real VCs in Your AI Coding Tool">
 <meta property="og:description" content="22 .md files that turn Claude, Cursor, or ChatGPT into a Sequoia partner, a YC interviewer, or a Tiger Global analyst. Free and open source.">
 <meta property="og:type" content="website">
@@ -108,7 +108,7 @@ section{padding:120px 0}
 
 /* ---------- TIERS ---------- */
 .tiers{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:900px){.tier-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.tier-grid{grid-template-columns:1fr}}
 .tier{padding:32px;border:1px solid var(--border);background:var(--card)}
@@ -231,11 +231,13 @@ footer a{color:var(--text-muted)}
 <p class="section-desc">Pick a VC, an archetype, a stage, or a region. Click to preview. Copy to clipboard. Paste into your AI tool. Pitch.</p>
 
 <div class="filters">
-<button class="filter-btn active" data-filter="all">All 22</button>
+<button class="filter-btn active" data-filter="all">All 28</button>
 <button class="filter-btn" data-filter="tier1">Real VCs</button>
 <button class="filter-btn" data-filter="tier2">Archetypes</button>
 <button class="filter-btn" data-filter="tier3">By Stage</button>
 <button class="filter-btn" data-filter="tier4">Regional</button>
+<button class="filter-btn" data-filter="tier5">Crypto</button>
+<button class="filter-btn" data-filter="benchmark">Benchmark</button>
 </div>
 
 <div class="skills-grid" id="skillsGrid"></div>
@@ -254,7 +256,7 @@ footer a{color:var(--text-muted)}
 <div class="step">
 <span class="step-num">01</span>
 <h3>Pick Your VC</h3>
-<p>Browse the 22 skills. Want the brutal YC 10-minute interview? The philosophical Founders Fund "what's your secret" test? A finance-background VC who leads with unit economics? Pick the one that matches your fundraising target.</p>
+<p>Browse the 28 skills. Want the brutal YC 10-minute interview? The philosophical Founders Fund "what's your secret" test? Paradigm's research-driven crypto deep dive? A Benchmark Mode that scores your pitch across 10 dimensions? Pick the one that matches your fundraising target.</p>
 </div>
 <div class="step">
 <span class="step-num">02</span>
@@ -333,6 +335,25 @@ footer a{color:var(--text-muted)}
 <li>Europe</li>
 </ul>
 </div>
+<div class="tier">
+<div class="tier-num">TIER 5</div>
+<h3>Crypto & Web3</h3>
+<div class="count">2 skills</div>
+<p>Crypto-native investors. Protocol-level thinking. Token economics. Decentralization as evaluation axis.</p>
+<ul>
+<li>Paradigm</li>
+<li>a16z Crypto</li>
+</ul>
+</div>
+<div class="tier">
+<div class="tier-num">META</div>
+<h3>Benchmark Mode</h3>
+<div class="count">1 skill</div>
+<p>Run your pitch through all perspectives. 10 dimensions. VC Readiness Score (0-100). Find every gap.</p>
+<ul>
+<li>Full Assessment</li>
+</ul>
+</div>
 </div>
 </div>
 </section>
@@ -343,7 +364,7 @@ footer a{color:var(--text-muted)}
 <div class="container">
 <h2 class="cta-title">Stop practicing in the mirror.<br>Start pitching to Sequoia.</h2>
 <p class="cta-sub">Every skill is free, open source, and ready to use. No signup. No paywall. Just better pitch prep.</p>
-<button class="cta-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Browse All 22 Skills</button>
+<button class="cta-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Browse All 28 Skills</button>
 <span class="cta-sub-link">MIT Licensed. Fork it. Improve it. Ship it.</span>
 </div>
 </section>
@@ -387,6 +408,8 @@ const SKILLS = [
 {id:'tiger-global',name:'Tiger Global',tag:'TIER 1',tier:'tier1',desc:'High-velocity growth investing. Numbers-first. No board seats. 315 deals in 2021 → 9 in 2024. Disciplined comeback.',meta:['Series B → IPO','$25M–$500M+','Hours to decide'],file:'skills/tier1-vcs/tiger-global.md'},
 {id:'bessemer',name:'Bessemer Venture Partners',tag:'TIER 1',tier:'tier1',desc:'Anti-Portfolio humility. Passed on Google, Apple, Zoom. Cloud/AI thesis. Decentralized decisions. Shopify, Twilio.',meta:['Seed → Growth','$500K–$100M','No committee'],file:'skills/tier1-vcs/bessemer.md'},
 {id:'greylock',name:'Greylock Partners',tag:'TIER 1',tier:'tier1',desc:'Your First Partner. Network effects obsession. Integrity as #1 filter. Facebook, LinkedIn, Discord.',meta:['Pre-seed → A','$1M–$38M','First check'],file:'skills/tier1-vcs/greylock.md'},
+{id:'kaszek',name:'Kaszek Ventures',tag:'TIER 1',tier:'tier1',desc:'LatAm-native VC founded by MercadoLibre co-founders. $3B+ AUM. Nubank seed investor. Operator-first. 12 unicorns.',meta:['Seed → Series B','$500K–$50M','Founder-first'],file:'skills/tier1-vcs/kaszek.md'},
+{id:'softbank-latam',name:'SoftBank Latin America',tag:'TIER 1',tier:'tier1',desc:'$10B+ deployed in LatAm. AI-first thesis. Big checks for category leaders. Post-2022 discipline.',meta:['Growth Stage','$15M–$200M+','AI Mandatory'],file:'skills/tier1-vcs/softbank-latam.md'},
 
 // TIER 2 — Archetypes
 {id:'operator-vc',name:'The Operator VC',tag:'TIER 2',tier:'tier2',desc:'Ex-founder who became VC. Uses war stories as frameworks. Focuses on execution, hiring, and operational discipline.',meta:['Ex-Founder','Execution Focus','War Stories'],file:'skills/tier2-archetypes/operator-vc.md'},
@@ -394,6 +417,7 @@ const SKILLS = [
 {id:'product-vc',name:'The Product VC',tag:'TIER 2',tier:'tier2',desc:'Product leader background. Obsessed with retention curves, UX, and product-market fit signals. Tries your product during the meeting.',meta:['Product Leader','Retention Focus','UX Obsessed'],file:'skills/tier2-archetypes/product-vc.md'},
 {id:'network-vc',name:'The Network VC',tag:'TIER 2',tier:'tier2',desc:'Relationship-driven. Evaluates by making 10-15 calls. Always offers introductions, even when passing.',meta:['Relationships','Intro Machine','Back-Channel'],file:'skills/tier2-archetypes/network-vc.md'},
 {id:'thesis-vc',name:'The Thesis VC',tag:'TIER 2',tier:'tier2',desc:'Sector expert who invests based on deep market theses. Matches your technical depth. Choose your sector.',meta:['Domain Expert','Thesis-Driven','Technical'],file:'skills/tier2-archetypes/thesis-vc.md'},
+{id:'impact',name:'Impact Investor',tag:'TIER 2',tier:'tier2',desc:'Dual mandate: market-rate returns AND measurable impact. Theory of Change required. UN SDG alignment. No impact washing.',meta:['Impact/ESG','Dual Mandate','IRIS+ Metrics'],file:'skills/tier2-archetypes/impact-investor.md'},
 
 // TIER 3 — Stages
 {id:'pre-seed',name:'Pre-Seed Angel',tag:'TIER 3',tier:'tier3',desc:'$25K-$100K checks. One meeting, one decision. Gut-driven. Betting on the jockey, not the horse.',meta:['$25K–$100K','SAFE','48hr Decision'],file:'skills/tier3-stages/pre-seed-angel.md'},
@@ -405,6 +429,13 @@ const SKILLS = [
 {id:'sv',name:'Silicon Valley VC',tag:'TIER 4',tier:'tier4',desc:'10x thinking. Bold vision first. Network-driven deal flow. Highest risk appetite in the world. Founder worship.',meta:['Sand Hill Road','10x or Nothing','Founder-Friendly'],file:'skills/tier4-regional/silicon-valley-vc.md'},
 {id:'latam',name:'Latin America VC',tag:'TIER 4',tier:'tier4',desc:'Capital efficiency is king. FX awareness. Exit-focused. Bilingual (PT/EN). Kaszek, Monashees, Canary style.',meta:['Sao Paulo Base','BRL Economics','Exit Required'],file:'skills/tier4-regional/latam-vc.md'},
 {id:'europe',name:'European VC',tag:'TIER 4',tier:'tier4',desc:'Multi-market from day one. GDPR as competitive advantage. Understated confidence. Global ambition required.',meta:['London/Berlin','Multi-Market','US Expansion'],file:'skills/tier4-regional/european-vc.md'},
+
+// TIER 5 — Crypto & Web3
+{id:'paradigm',name:'Paradigm',tag:'TIER 5',tier:'tier5',desc:'Research-driven crypto investing. $12.7B AUM. Infrastructure over applications. Working sessions, not pitch decks.',meta:['Protocol-Level','$1M–$225M','Research-First'],file:'skills/tier5-crypto/paradigm.md'},
+{id:'a16z-crypto',name:'a16z Crypto (CSX)',tag:'TIER 5',tier:'tier5',desc:'$7.6B+ crypto arm. "Read Write Own" thesis. DXR Framework for token launches. Full-stack platform support.',meta:['All Stages','$500K–$450M+','Token Design'],file:'skills/tier5-crypto/a16z-crypto.md'},
+
+// BENCHMARK MODE
+{id:'benchmark-mode',name:'Benchmark Mode',tag:'META',tier:'benchmark',desc:'Run your pitch through all VC perspectives. 10 dimensions. Specific scores. VC Readiness Score (0-100). Find every gap.',meta:['All Perspectives','10 Dimensions','0-100 Score'],file:'skills/benchmark/benchmark.md'},
 ];
 
 // Render grid
