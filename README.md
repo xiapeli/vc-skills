@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/og-image.png" alt="VC Skills" width="600">
+</p>
+
 <h1 align="center">VC Skills</h1>
 <p align="center"><strong>Pitch to AI VCs before you pitch for real.</strong></p>
 
