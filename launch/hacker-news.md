@@ -5,7 +5,7 @@ Show HN: VC Skills – .md files that make AI assistants simulate real VCs
 
 ## Body
 
-I built a library of 27 skills.md files that turn AI coding assistants (Claude Code, Cursor, ChatGPT) into realistic VC partners.
+I built a library of 28 skills.md files that turn AI coding assistants (Claude Code, Cursor, ChatGPT) into realistic VC partners.
 
 Each skill is a complete simulation — identity, investment thesis, evaluation framework, 20-40 real questions, red flags, deal terms, and communication style. Built from 100+ sources (partner interviews, investment memos, Crunchbase data, portfolio analysis).
 
@@ -16,7 +16,7 @@ There's a Benchmark Mode that evaluates your pitch across 10 dimensions (Vision,
 Usage:
 
     npx vc-skills sequoia    # copies skill to clipboard
-    npx vc-skills --list     # shows all 27 skills
+    npx vc-skills --list     # shows all 28 skills
 
 Or just grab the .md files from GitHub and paste into your AI tool.
 

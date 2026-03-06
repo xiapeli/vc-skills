@@ -1,7 +1,7 @@
 # Twitter/X Launch Thread
 
 ## Tweet 1 (Hook)
-I built 27 AI skills that simulate real VCs.
+I built 28 AI skills that simulate real VCs.
 
 Drop a file into Claude Code or Cursor. It becomes Sequoia. Or YC. Or a16z.
 
@@ -30,7 +30,7 @@ Each skill includes:
 Built from 100+ sources: partner interviews, investment memos, portfolio data.
 
 ## Tweet 4 (The lineup)
-27 skills across 5 tiers:
+28 skills across 5 tiers:
 
 Real firms: Sequoia, a16z, YC, Benchmark, Founders Fund, Accel, Lightspeed, Tiger Global, Bessemer, Greylock, Kaszek, SoftBank LatAm
 

@@ -10,13 +10,13 @@ Drop a .md file into Claude Code, Cursor, or ChatGPT. The AI asks the questions 
 
 Built from 100+ research sources — partner interviews, investment memos, deal data, portfolio analysis. Every question, red flag, and rejection pattern is based on how these firms actually operate.
 
-27 skills across 5 tiers:
+28 skills across 5 tiers:
 - Real VC firms (Sequoia, a16z, YC, Benchmark, Founders Fund, and 7 more)
 - VC archetypes (Operator, Finance, Product, Network, Impact)
 - Investment stages (Pre-seed through Growth)
 - Regional (Silicon Valley, Latin America, Europe)
 - Crypto (Paradigm, a16z Crypto)
-- Benchmark Mode: run your pitch through all 27 perspectives at once
+- Benchmark Mode: run your pitch through all 28 perspectives at once
 
 100% free. MIT licensed. Open source.
 

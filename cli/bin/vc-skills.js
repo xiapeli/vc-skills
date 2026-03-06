@@ -191,7 +191,7 @@ function printHelp() {
 
   ${c.bold('SKILLS')}
 
-    Run ${c.cyan('npx vc-skills list')} to see all 22 available skills.
+    Run ${c.cyan('npx vc-skills list')} to see all 28 available skills.
 `);
 }
 
