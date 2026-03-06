@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VC Skills — Pitch to AI VCs Before You Pitch for Real</title>
+<meta name="description" content="22 simulation skills that make AI assistants behave like real VC partners. Sequoia, a16z, YC, Benchmark, and 18 more. Based on 100+ real sources.">
+<meta property="og:title" content="VC Skills — Simulate Real VCs in Your AI Coding Tool">
+<meta property="og:description" content="22 .md files that turn Claude, Cursor, or ChatGPT into a Sequoia partner, a YC interviewer, or a Tiger Global analyst. Free and open source.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0A0A0A;--surface:#111;--card:#161616;--border:#1E1E1E;
+--text:#E0E0E0;--text-muted:#777;--text-dim:#444;
+--accent:#C8A04A;--accent-dim:#8B6D2F;
+--mono:'SF Mono','Fira Code','Cascadia Code','Consolas',monospace;
+--sans:system-ui,-apple-system,'Segoe UI','Helvetica Neue',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* Grain overlay */
+body::after{
+content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.03;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+}
+
+::selection{background:var(--accent);color:var(--bg)}
+
+a{color:var(--accent);text-decoration:none;transition:opacity .2s}
+a:hover{opacity:.8}
+
+/* ---------- LAYOUT ---------- */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:background .3s}
+nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:var(--mono);font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted)}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:13px;color:var(--text-muted);letter-spacing:.5px;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--text);opacity:1}
+@media(max-width:640px){.nav-links{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 80px;position:relative}
+.hero-label{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+.hero h1{font-size:clamp(40px,7vw,88px);font-weight:700;line-height:1.05;letter-spacing:-2px;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:clamp(16px,1.8vw,20px);color:var(--text-muted);max-width:560px;margin-top:32px;line-height:1.7}
+.hero-stats{display:flex;gap:48px;margin-top:56px;flex-wrap:wrap}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat .num{font-family:var(--mono);font-size:clamp(32px,4vw,48px);font-weight:700;color:var(--text);letter-spacing:-1px}
+.hero-stat .label{font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:2px;text-transform:uppercase;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.8}}
+
+/* ---------- SECTION SHARED ---------- */
+section{padding:120px 0}
+.section-num{font-family:var(--mono);font-size:13px;color:var(--accent-dim);letter-spacing:2px;margin-bottom:16px}
+.section-title{font-size:clamp(28px,4vw,48px);font-weight:700;letter-spacing:-1px;margin-bottom:24px;line-height:1.15}
+.section-desc{font-size:17px;color:var(--text-muted);max-width:600px;line-height:1.7;margin-bottom:56px}
+.divider{border:none;border-top:1px solid var(--border);margin:0}
+
+/* ---------- PROBLEM ---------- */
+.problem{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.problem-left .big-quote{font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.4;letter-spacing:-.5px}
+.problem-left .big-quote em{font-style:normal;color:var(--accent)}
+.problem-right{display:flex;flex-direction:column;gap:24px}
+.problem-item{padding:20px 0;border-bottom:1px solid var(--border)}
+.problem-item:last-child{border-bottom:none}
+.problem-item .p-label{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.problem-item p{color:var(--text-muted);font-size:15px;line-height:1.6}
+@media(max-width:768px){.problem-grid{grid-template-columns:1fr}}
+
+/* ---------- SKILLS GRID ---------- */
+.filters{display:flex;gap:8px;margin-bottom:40px;flex-wrap:wrap}
+.filter-btn{font-family:var(--mono);font-size:12px;padding:8px 16px;background:transparent;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
+.filter-btn:hover{border-color:var(--text-dim);color:var(--text)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+@media(max-width:400px){.skills-grid{grid-template-columns:1fr}}
+
+.skill-card{background:var(--card);border:1px solid var(--border);padding:28px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
+.skill-card:hover{border-color:var(--accent-dim);transform:translateY(-2px)}
+.skill-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.skill-card:hover::before{transform:scaleX(1)}
+.skill-tag{font-family:var(--mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;display:inline-block}
+.skill-name{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.3px}
+.skill-desc{font-size:14px;color:var(--text-muted);line-height:1.5;margin-bottom:16px}
+.skill-meta{display:flex;gap:16px;flex-wrap:wrap}
+.skill-meta span{font-family:var(--mono);font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+
+/* ---------- HOW IT WORKS ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+@media(max-width:768px){.steps{grid-template-columns:1fr}}
+.step{padding:32px;border:1px solid var(--border);position:relative}
+.step-num{font-family:var(--mono);font-size:48px;font-weight:700;color:var(--border);position:absolute;top:16px;right:20px;line-height:1}
+.step h3{font-size:18px;font-weight:600;margin-bottom:12px}
+.step p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.step code{font-family:var(--mono);font-size:12px;background:var(--bg);padding:2px 8px;color:var(--accent)}
+
+/* ---------- TIERS ---------- */
+.tiers{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:900px){.tier-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.tier-grid{grid-template-columns:1fr}}
+.tier{padding:32px;border:1px solid var(--border);background:var(--card)}
+.tier-num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:2px;margin-bottom:12px}
+.tier h3{font-size:20px;font-weight:600;margin-bottom:8px;letter-spacing:-.3px}
+.tier .count{font-family:var(--mono);font-size:13px;color:var(--text-dim);margin-bottom:16px}
+.tier p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.tier ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:6px}
+.tier li{font-size:13px;color:var(--text-muted);padding-left:16px;position:relative}
+.tier li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--accent-dim)}
+
+/* ---------- CTA ---------- */
+.cta-section{text-align:center;padding:120px 0}
+.cta-title{font-size:clamp(28px,5vw,56px);font-weight:700;letter-spacing:-1px;margin-bottom:24px;line-height:1.15}
+.cta-sub{font-size:17px;color:var(--text-muted);margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;padding:16px 40px;background:var(--accent);color:var(--bg);font-weight:600;letter-spacing:.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s}
+.cta-btn:hover{background:#D4AA55;transform:translateY(-1px);opacity:1}
+.cta-sub-link{display:block;margin-top:24px;font-family:var(--mono);font-size:12px;color:var(--text-dim);letter-spacing:1px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--border);padding:40px 0}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-size:13px;color:var(--text-dim)}
+footer a{color:var(--text-muted)}
+
+/* ---------- MODAL ---------- */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:200;display:none;opacity:0;transition:opacity .3s}
+.modal-overlay.active{display:flex;opacity:1}
+.modal{width:90%;max-width:800px;max-height:85vh;margin:auto;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;position:relative}
+.modal-header{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;border-bottom:1px solid var(--border);flex-shrink:0}
+.modal-title{font-size:18px;font-weight:600}
+.modal-actions{display:flex;gap:8px;align-items:center}
+.modal-btn{font-family:var(--mono);font-size:11px;padding:8px 16px;background:transparent;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
+.modal-btn:hover{border-color:var(--text-dim);color:var(--text)}
+.modal-btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.modal-btn.primary:hover{background:#D4AA55}
+.modal-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:none;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;font-size:18px;transition:all .2s}
+.modal-close:hover{border-color:var(--text-dim);color:var(--text)}
+.modal-body{padding:28px;overflow-y:auto;flex:1}
+.modal-body pre{font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--text-muted);white-space:pre-wrap;word-break:break-word}
+
+/* ---------- TOAST ---------- */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);font-family:var(--mono);font-size:13px;padding:12px 24px;background:var(--accent);color:var(--bg);z-index:300;transition:transform .3s;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+<div class="container">
+<div class="nav-logo">vc<span>/</span>skills</div>
+<div class="nav-links">
+<a href="#skills">Skills</a>
+<a href="#how">How It Works</a>
+<a href="#tiers">Tiers</a>
+<a href="https://github.com" target="_blank">GitHub</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="hero-label">Open Source. Free Forever.</div>
+<h1>Pitch to the world's toughest VCs.<br><em>Before you pitch for real.</em></h1>
+<p class="hero-sub">22 skill files that turn any AI assistant into a realistic VC partner. Sequoia's "Why now?" interrogation. YC's 10-minute interview. Thiel's "What's your secret?" Each one built from real data, real frameworks, real deal terms.</p>
+<div class="hero-stats">
+<div class="hero-stat">
+<span class="num">22</span>
+<span class="label">Skills</span>
+</div>
+<div class="hero-stat">
+<span class="num">3,537</span>
+<span class="label">Lines of Simulation</span>
+</div>
+<div class="hero-stat">
+<span class="num">100+</span>
+<span class="label">Research Sources</span>
+</div>
+<div class="hero-stat">
+<span class="num">$0</span>
+<span class="label">Price</span>
+</div>
+</div>
+<div class="hero-scroll">Scroll</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section class="problem">
+<div class="container">
+<div class="problem-grid">
+<div class="problem-left">
+<div class="big-quote">Most pitch practice is <em>useless</em>. Your friends are too nice. Your mirror doesn't ask about unit economics. And the internet's "VC simulation prompts" are generic garbage.</div>
+</div>
+<div class="problem-right">
+<div class="problem-item">
+<div class="p-label">The Real Problem</div>
+<p>You get one shot with a real VC. Sequoia sees thousands of companies and invests in a few dozen. YC accepts less than 1%. The questions they ask are specific, sharp, and designed to break weak thinking. You need to face those questions before the meeting, not during it.</p>
+</div>
+<div class="problem-item">
+<div class="p-label">What This Is</div>
+<p>Each skill is a .md file you paste into Claude, Cursor, ChatGPT, or any AI tool. The AI becomes that VC. It asks their actual questions. It evaluates with their real frameworks. It gives you a verdict: pass, invest, or come back when you have X. No pulled punches.</p>
+</div>
+<div class="problem-item">
+<div class="p-label">What This Is NOT</div>
+<p>Not a chatbot. Not a SaaS product. Not a subscription. Just .md files. Copy, paste, pitch. Built from 100+ real sources: Carta data, HBR research, partner blog posts, investment memos, and 2025-2026 market benchmarks. Open source, MIT licensed.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+<div class="container">
+<div class="section-num">01</div>
+<h2 class="section-title">Browse Skills</h2>
+<p class="section-desc">Pick a VC, an archetype, a stage, or a region. Click to preview. Copy to clipboard. Paste into your AI tool. Pitch.</p>
+
+<div class="filters">
+<button class="filter-btn active" data-filter="all">All 22</button>
+<button class="filter-btn" data-filter="tier1">Real VCs</button>
+<button class="filter-btn" data-filter="tier2">Archetypes</button>
+<button class="filter-btn" data-filter="tier3">By Stage</button>
+<button class="filter-btn" data-filter="tier4">Regional</button>
+</div>
+
+<div class="skills-grid" id="skillsGrid"></div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="how">
+<div class="container">
+<div class="section-num">02</div>
+<h2 class="section-title">Three Steps</h2>
+<p class="section-desc">No account. No API key. No setup. Just markdown files and an AI assistant you already use.</p>
+
+<div class="steps">
+<div class="step">
+<span class="step-num">01</span>
+<h3>Pick Your VC</h3>
+<p>Browse the 22 skills. Want the brutal YC 10-minute interview? The philosophical Founders Fund "what's your secret" test? A finance-background VC who leads with unit economics? Pick the one that matches your fundraising target.</p>
+</div>
+<div class="step">
+<span class="step-num">02</span>
+<h3>Copy the Skill</h3>
+<p>Click any skill card, hit <code>Copy</code>, and paste the .md content into your AI tool's system prompt or custom instructions. Works with Claude, Cursor, ChatGPT, Windsurf, and anything that accepts custom instructions.</p>
+</div>
+<div class="step">
+<span class="step-num">03</span>
+<h3>Pitch</h3>
+<p>Start talking. The AI will ask the questions that real VC would ask. It will push back on weak answers. It will evaluate your metrics against real benchmarks. At the end, you get a verdict and specific feedback.</p>
+</div>
+</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section class="tiers" id="tiers">
+<div class="container">
+<div class="section-num">03</div>
+<h2 class="section-title">Four Tiers</h2>
+<p class="section-desc">Different skills for different needs. Practice with one or run the gauntlet through all 22.</p>
+
+<div class="tier-grid">
+<div class="tier">
+<div class="tier-num">TIER 1</div>
+<h3>Real VCs</h3>
+<div class="count">10 skills</div>
+<p>Simulate a partner at a specific firm with their actual thesis, process, questions, and deal terms.</p>
+<ul>
+<li>Sequoia Capital</li>
+<li>Andreessen Horowitz</li>
+<li>Y Combinator</li>
+<li>Benchmark</li>
+<li>Founders Fund</li>
+<li>Accel</li>
+<li>Lightspeed</li>
+<li>Tiger Global</li>
+<li>Bessemer Venture Partners</li>
+<li>Greylock Partners</li>
+</ul>
+</div>
+<div class="tier">
+<div class="tier-num">TIER 2</div>
+<h3>Archetypes</h3>
+<div class="count">5 skills</div>
+<p>Simulate a type of VC partner, regardless of firm. Each thinks and evaluates differently.</p>
+<ul>
+<li>Operator VC (ex-founder)</li>
+<li>Finance VC (banking/PE)</li>
+<li>Product VC (UX obsessed)</li>
+<li>Network VC (intro machine)</li>
+<li>Thesis VC (sector expert)</li>
+</ul>
+</div>
+<div class="tier">
+<div class="tier-num">TIER 3</div>
+<h3>By Stage</h3>
+<div class="count">4 skills</div>
+<p>Stage-appropriate questions, benchmarks, and expectations. From $25K angel checks to $150M growth rounds.</p>
+<ul>
+<li>Pre-seed Angel</li>
+<li>Seed Investor</li>
+<li>Series A Partner</li>
+<li>Growth Investor</li>
+</ul>
+</div>
+<div class="tier">
+<div class="tier-num">TIER 4</div>
+<h3>Regional</h3>
+<div class="count">3 skills</div>
+<p>Different regions, different rules. SV thinks big. LatAm demands efficiency. Europe wants multi-market.</p>
+<ul>
+<li>Silicon Valley</li>
+<li>Latin America</li>
+<li>Europe</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section class="cta-section">
+<div class="container">
+<h2 class="cta-title">Stop practicing in the mirror.<br>Start pitching to Sequoia.</h2>
+<p class="cta-sub">Every skill is free, open source, and ready to use. No signup. No paywall. Just better pitch prep.</p>
+<button class="cta-btn" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Browse All 22 Skills</button>
+<span class="cta-sub-link">MIT Licensed. Fork it. Improve it. Ship it.</span>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>Built with obsessive research. Not vibes.</p>
+<p>Made by <a href="https://gogrowth.me" target="_blank">GoGrowth</a></p>
+</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+<div class="modal">
+<div class="modal-header">
+<span class="modal-title" id="modalTitle">Skill Name</span>
+<div class="modal-actions">
+<button class="modal-btn" id="downloadBtn" title="Download .md file">Download</button>
+<button class="modal-btn primary" id="copyBtn" title="Copy to clipboard">Copy</button>
+<button class="modal-close" id="closeModal">&times;</button>
+</div>
+</div>
+<div class="modal-body">
+<pre id="modalContent"></pre>
+</div>
+</div>
+</div>
+
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<script>
+const SKILLS = [
+// TIER 1 — Real VCs
+{id:'sequoia',name:'Sequoia Capital',tag:'TIER 1',tier:'tier1',desc:'Company design framework. "Why now?" is sacred. $56B AUM. The most storied firm in VC history.',meta:['Pre-seed → Growth','$1M–$100M+','Committee debate'],file:'skills/tier1-vcs/sequoia.md'},
+{id:'a16z',name:'Andreessen Horowitz',tag:'TIER 1',tier:'tier1',desc:'Platform model with 700+ employees. Idea maze concept. "Software is eating the world" thesis. $90B AUM.',meta:['Pre-seed → Growth','$250K–$1B+','Investment committee'],file:'skills/tier1-vcs/a16z.md'},
+{id:'yc',name:'Y Combinator',tag:'TIER 1',tier:'tier1',desc:'10-minute interview. $500K fixed deal. Brutally direct. <1% acceptance rate. "Make something people want."',meta:['Pre-seed/Seed','$500K fixed','Partner conviction'],file:'skills/tier1-vcs/yc.md'},
+{id:'benchmark',name:'Benchmark Capital',tag:'TIER 1',tier:'tier1',desc:'5 equal partners. Series A only. Board seat on every deal. Contrarian bets. Backed eBay, Uber, Snap.',meta:['Series A Only','$10M–$50M','Equal consensus'],file:'skills/tier1-vcs/benchmark.md'},
+{id:'founders-fund',name:'Founders Fund',tag:'TIER 1',tier:'tier1',desc:'"What\'s your secret?" Zero to One philosophy. Hard tech. Contrarian. Hands-off. SpaceX, Palantir.',meta:['All Stages','$3M–$460M','Director veto'],file:'skills/tier1-vcs/founders-fund.md'},
+{id:'accel',name:'Accel',tag:'TIER 1',tier:'tier1',desc:'Prepared mind philosophy. Studies markets before seeing deals. Led Facebook\'s first VC round. Stayed with Slack through pivot.',meta:['Seed → Growth','$5M–$100M+','Prepared mind'],file:'skills/tier1-vcs/accel.md'},
+{id:'lightspeed',name:'Lightspeed Venture Partners',tag:'TIER 1',tier:'tier1',desc:'Depth over breadth. $9B raised in 2025. Snap seed investor. 165 AI companies backed.',meta:['Seed → Series F','$2M–$1B+','Sector-deep'],file:'skills/tier1-vcs/lightspeed.md'},
+{id:'tiger-global',name:'Tiger Global',tag:'TIER 1',tier:'tier1',desc:'High-velocity growth investing. Numbers-first. No board seats. 315 deals in 2021 → 9 in 2024. Disciplined comeback.',meta:['Series B → IPO','$25M–$500M+','Hours to decide'],file:'skills/tier1-vcs/tiger-global.md'},
+{id:'bessemer',name:'Bessemer Venture Partners',tag:'TIER 1',tier:'tier1',desc:'Anti-Portfolio humility. Passed on Google, Apple, Zoom. Cloud/AI thesis. Decentralized decisions. Shopify, Twilio.',meta:['Seed → Growth','$500K–$100M','No committee'],file:'skills/tier1-vcs/bessemer.md'},
+{id:'greylock',name:'Greylock Partners',tag:'TIER 1',tier:'tier1',desc:'Your First Partner. Network effects obsession. Integrity as #1 filter. Facebook, LinkedIn, Discord.',meta:['Pre-seed → A','$1M–$38M','First check'],file:'skills/tier1-vcs/greylock.md'},
+
+// TIER 2 — Archetypes
+{id:'operator-vc',name:'The Operator VC',tag:'TIER 2',tier:'tier2',desc:'Ex-founder who became VC. Uses war stories as frameworks. Focuses on execution, hiring, and operational discipline.',meta:['Ex-Founder','Execution Focus','War Stories'],file:'skills/tier2-archetypes/operator-vc.md'},
+{id:'finance-vc',name:'The Finance VC',tag:'TIER 2',tier:'tier2',desc:'Banking/PE background. Thinks in IRR, multiples, and exit scenarios. Leads with P&L, not vision.',meta:['Banking/PE','Unit Economics','Exit Multiples'],file:'skills/tier2-archetypes/finance-vc.md'},
+{id:'product-vc',name:'The Product VC',tag:'TIER 2',tier:'tier2',desc:'Product leader background. Obsessed with retention curves, UX, and product-market fit signals. Tries your product during the meeting.',meta:['Product Leader','Retention Focus','UX Obsessed'],file:'skills/tier2-archetypes/product-vc.md'},
+{id:'network-vc',name:'The Network VC',tag:'TIER 2',tier:'tier2',desc:'Relationship-driven. Evaluates by making 10-15 calls. Always offers introductions, even when passing.',meta:['Relationships','Intro Machine','Back-Channel'],file:'skills/tier2-archetypes/network-vc.md'},
+{id:'thesis-vc',name:'The Thesis VC',tag:'TIER 2',tier:'tier2',desc:'Sector expert who invests based on deep market theses. Matches your technical depth. Choose your sector.',meta:['Domain Expert','Thesis-Driven','Technical'],file:'skills/tier2-archetypes/thesis-vc.md'},
+
+// TIER 3 — Stages
+{id:'pre-seed',name:'Pre-Seed Angel',tag:'TIER 3',tier:'tier3',desc:'$25K-$100K checks. One meeting, one decision. Gut-driven. Betting on the jockey, not the horse.',meta:['$25K–$100K','SAFE','48hr Decision'],file:'skills/tier3-stages/pre-seed-angel.md'},
+{id:'seed',name:'Seed Investor',tag:'TIER 3',tier:'tier3',desc:'$2M-$5M rounds. Looking for early signal and a clear path to Series A. Coach who pushes for clarity.',meta:['$1M–$4M','10-15% Target','Path to A'],file:'skills/tier3-stages/seed-investor.md'},
+{id:'series-a',name:'Series A Partner',tag:'TIER 3',tier:'tier3',desc:'$10M-$25M rounds. Needs proof: $1.5M+ ARR, 2-3x growth, repeatable GTM, real unit economics. No more hope.',meta:['$10M–$25M','18-20% Target','Metrics Bar'],file:'skills/tier3-stages/series-a-partner.md'},
+{id:'growth',name:'Growth Investor',tag:'TIER 3',tier:'tier3',desc:'$25M-$150M rounds. Thinks like a public market analyst. Underwrites to IPO thesis. Unit economics or nothing.',meta:['$25M–$150M','Exit Model','Rule of 40'],file:'skills/tier3-stages/growth-investor.md'},
+
+// TIER 4 — Regional
+{id:'sv',name:'Silicon Valley VC',tag:'TIER 4',tier:'tier4',desc:'10x thinking. Bold vision first. Network-driven deal flow. Highest risk appetite in the world. Founder worship.',meta:['Sand Hill Road','10x or Nothing','Founder-Friendly'],file:'skills/tier4-regional/silicon-valley-vc.md'},
+{id:'latam',name:'Latin America VC',tag:'TIER 4',tier:'tier4',desc:'Capital efficiency is king. FX awareness. Exit-focused. Bilingual (PT/EN). Kaszek, Monashees, Canary style.',meta:['Sao Paulo Base','BRL Economics','Exit Required'],file:'skills/tier4-regional/latam-vc.md'},
+{id:'europe',name:'European VC',tag:'TIER 4',tier:'tier4',desc:'Multi-market from day one. GDPR as competitive advantage. Understated confidence. Global ambition required.',meta:['London/Berlin','Multi-Market','US Expansion'],file:'skills/tier4-regional/european-vc.md'},
+];
+
+// Render grid
+const grid = document.getElementById('skillsGrid');
+
+function renderSkills(filter) {
+  const filtered = filter === 'all' ? SKILLS : SKILLS.filter(s => s.tier === filter);
+  grid.innerHTML = filtered.map(s => `
+    <div class="skill-card" data-file="${s.file}" data-name="${s.name}">
+      <span class="skill-tag">${s.tag}</span>
+      <div class="skill-name">${s.name}</div>
+      <div class="skill-desc">${s.desc}</div>
+      <div class="skill-meta">${s.meta.map(m => `<span>${m}</span>`).join('')}</div>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.file, card.dataset.name));
+  });
+}
+
+renderSkills('all');
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderSkills(btn.dataset.filter);
+  });
+});
+
+// Modal
+const overlay = document.getElementById('modalOverlay');
+const modalTitle = document.getElementById('modalTitle');
+const modalContent = document.getElementById('modalContent');
+let currentFile = '';
+let currentContent = '';
+
+async function openModal(file, name) {
+  currentFile = file;
+  modalTitle.textContent = name;
+  modalContent.textContent = 'Loading...';
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  try {
+    const res = await fetch(file);
+    currentContent = await res.text();
+    modalContent.textContent = currentContent;
+  } catch (e) {
+    modalContent.textContent = 'Failed to load skill file. Try downloading directly.';
+  }
+}
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+function closeModal() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Copy
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  if (!currentContent) return;
+  try {
+    await navigator.clipboard.writeText(currentContent);
+    showToast('Copied to clipboard');
+  } catch {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = currentContent;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('Copied to clipboard');
+  }
+});
+
+// Download
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  if (!currentContent) return;
+  const blob = new Blob([currentContent], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = currentFile.split('/').pop();
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// Toast
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
+</body>
+</html>
