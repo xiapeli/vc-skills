@@ -1,20 +1,16 @@
-<p align="center">
-  <img src="public/og-image.png" alt="VC Skills" width="600">
-</p>
-
 <h1 align="center">VC Skills</h1>
 <p align="center"><strong>Pitch to AI VCs before you pitch for real.</strong></p>
 
 <p align="center">
   <a href="https://github.com/xiapeli/vc-skills/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="#skills-library"><img src="https://img.shields.io/badge/skills-27+-gold.svg" alt="27+ Skills"></a>
+  <a href="#skills-library"><img src="https://img.shields.io/badge/skills-28+--gold.svg" alt="28+ Skills"></a>
   <a href="https://www.npmjs.com/package/vc-skills"><img src="https://img.shields.io/npm/v/vc-skills.svg" alt="npm version"></a>
   <a href="https://vc-skills.gogrowth.me"><img src="https://img.shields.io/badge/site-live-brightgreen.svg" alt="Site"></a>
 </p>
 
 <p align="center">
   Skills.md files that make AI assistants simulate real venture capital partners.<br>
-  Sequoia. a16z. YC. Benchmark. Paradigm. 27 VCs that ask the questions real VCs ask.
+  Sequoia. a16z. YC. Benchmark. Paradigm. 28 VCs that ask the questions real VCs ask.
 </p>
 
 ---
