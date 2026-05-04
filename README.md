@@ -32,7 +32,18 @@ The AI will ask you the questions that firm asks. Push back where they push back
 ### Option 1: Copy from the website
 Visit **[vc-skills.gogrowth.me](https://vc-skills.gogrowth.me)** — browse, preview, copy with one click.
 
-### Option 2: CLI (recommended)
+### Option 2: Claude Code plugin marketplace (recommended for Claude Code)
+This repo is a Claude Code plugin marketplace. Each VC is its own installable plugin — Claude auto-activates the persona when relevant.
+
+```
+/plugin marketplace add xiapeli/vc-skills
+/plugin install sequoia@vc-skills
+/plugin install a16z@vc-skills
+```
+
+Browse all 28 plugins with `/plugin` after adding the marketplace. See [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) for the full catalog.
+
+### Option 3: CLI
 ```bash
 # List all available skills
 npx vc-skills
@@ -50,7 +61,7 @@ npx vc-skills sequoia --cursor
 npx vc-skills sequoia --save
 ```
 
-### Option 3: Manual
+### Option 4: Manual
 ```bash
 # Clone the repo
 git clone https://github.com/xiapeli/vc-skills.git
@@ -59,7 +70,7 @@ git clone https://github.com/xiapeli/vc-skills.git
 cat skills/tier1-vcs/sequoia.md | pbcopy
 ```
 
-### Option 4: Claude Code native
+### Option 5: Claude Code slash commands (legacy)
 ```bash
 # Install all VC skills as Claude Code commands
 npx vc-skills --install-all-claude

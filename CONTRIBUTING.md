@@ -172,9 +172,11 @@ Use lowercase, hyphens for spaces. Keep names short and recognizable.
 
 1. Fork this repo
 2. Create a branch: `git checkout -b skill/paradigm`
-3. Add your skill file in the correct tier directory
-4. Update the skills table in README.md
-5. Open a PR with:
+3. Add your skill file in the correct tier directory under `skills/`
+4. Add a registry entry in `cli/lib/registry.js` (name, path, firm, desc)
+5. Run `node scripts/build-marketplace.js` to regenerate `plugins/` and `.claude-plugin/marketplace.json`
+6. Update the skills table in README.md
+7. Open a PR with:
    - Skill file
    - Research sources (list the URLs you used)
    - Why this skill matters (1-2 sentences)

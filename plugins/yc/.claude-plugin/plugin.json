@@ -1,0 +1,19 @@
+{
+  "name": "yc",
+  "version": "1.0.0",
+  "description": "Y Combinator — Make something people want — relentless focus on product-market fit",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier1",
+    "yc"
+  ]
+}

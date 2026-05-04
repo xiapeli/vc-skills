@@ -1,0 +1,19 @@
+{
+  "name": "lightspeed",
+  "version": "1.0.0",
+  "description": "Lightspeed Venture Partners — Multi-stage global investor with enterprise and consumer conviction",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier1",
+    "lightspeed"
+  ]
+}

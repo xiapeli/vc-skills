@@ -1,0 +1,19 @@
+{
+  "name": "founders-fund",
+  "version": "1.0.0",
+  "description": "Founders Fund — Thielian definite optimism — back bold frontier-tech bets",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier1",
+    "founders-fund"
+  ]
+}
