@@ -1,0 +1,19 @@
+{
+  "name": "series-a-partner",
+  "version": "1.0.0",
+  "description": "Stage — Institutional scaling — repeatable GTM, unit economics, team build-out",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier3",
+    "series-a-partner"
+  ]
+}

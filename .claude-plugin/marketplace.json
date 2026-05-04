@@ -1,0 +1,351 @@
+{
+  "name": "vc-skills",
+  "description": "VC investor persona simulators for Claude Code — pitch to AI VCs before you pitch for real.",
+  "owner": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "homepage": "https://vc-skills.gogrowth.me",
+    "repository": "https://github.com/xiapeli/vc-skills"
+  },
+  "plugins": [
+    {
+      "name": "sequoia",
+      "source": "./plugins/sequoia",
+      "description": "Sequoia Capital — Pattern-matching legendary operator who built category-defining companies",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "sequoia"
+      ]
+    },
+    {
+      "name": "a16z",
+      "source": "./plugins/a16z",
+      "description": "Andreessen Horowitz — Software-is-eating-the-world thesis with deep technical conviction",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "a16z"
+      ]
+    },
+    {
+      "name": "yc",
+      "source": "./plugins/yc",
+      "description": "Y Combinator — Make something people want — relentless focus on product-market fit",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "yc"
+      ]
+    },
+    {
+      "name": "benchmark",
+      "source": "./plugins/benchmark",
+      "description": "Benchmark Capital — Equal-partnership model with contrarian board-level operator mentality",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "benchmark"
+      ]
+    },
+    {
+      "name": "founders-fund",
+      "source": "./plugins/founders-fund",
+      "description": "Founders Fund — Thielian definite optimism — back bold frontier-tech bets",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "founders-fund"
+      ]
+    },
+    {
+      "name": "accel",
+      "source": "./plugins/accel",
+      "description": "Accel — Early mover in SaaS and global expansion with prepared-mind investing",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "accel"
+      ]
+    },
+    {
+      "name": "lightspeed",
+      "source": "./plugins/lightspeed",
+      "description": "Lightspeed Venture Partners — Multi-stage global investor with enterprise and consumer conviction",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "lightspeed"
+      ]
+    },
+    {
+      "name": "tiger-global",
+      "source": "./plugins/tiger-global",
+      "description": "Tiger Global — Data-driven velocity investor scaling winners across public and private markets",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "tiger-global"
+      ]
+    },
+    {
+      "name": "bessemer",
+      "source": "./plugins/bessemer",
+      "description": "Bessemer Venture Partners — Cloud computing thesis pioneer with rigorous anti-portfolio honesty",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "bessemer"
+      ]
+    },
+    {
+      "name": "greylock",
+      "source": "./plugins/greylock",
+      "description": "Greylock Partners — Network-effects thesis investor building platforms that compound",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "greylock"
+      ]
+    },
+    {
+      "name": "kaszek",
+      "source": "./plugins/kaszek",
+      "description": "Kaszek Ventures — LatAm-native VC from MercadoLibre founders — operator-first, $3B+ AUM",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "kaszek"
+      ]
+    },
+    {
+      "name": "softbank-latam",
+      "source": "./plugins/softbank-latam",
+      "description": "SoftBank Latin America — AI-first LatAm growth investor — big checks, category leaders, post-2022 discipline",
+      "version": "1.0.0",
+      "category": "tier1",
+      "tags": [
+        "vc",
+        "tier1",
+        "softbank-latam"
+      ]
+    },
+    {
+      "name": "operator-vc",
+      "source": "./plugins/operator-vc",
+      "description": "Archetype — Former founder/exec who evaluates through operational lens",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "operator-vc"
+      ]
+    },
+    {
+      "name": "finance-vc",
+      "source": "./plugins/finance-vc",
+      "description": "Archetype — Wall Street rigor applied to venture — unit economics and LTV/CAC obsessed",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "finance-vc"
+      ]
+    },
+    {
+      "name": "product-vc",
+      "source": "./plugins/product-vc",
+      "description": "Archetype — Product intuition first — evaluates UX, retention loops, and user delight",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "product-vc"
+      ]
+    },
+    {
+      "name": "network-vc",
+      "source": "./plugins/network-vc",
+      "description": "Archetype — Connector who evaluates deals through ecosystem and relationship leverage",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "network-vc"
+      ]
+    },
+    {
+      "name": "thesis-vc",
+      "source": "./plugins/thesis-vc",
+      "description": "Archetype — Deep research investor with sector-specific conviction and published theses",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "thesis-vc"
+      ]
+    },
+    {
+      "name": "impact-investor",
+      "source": "./plugins/impact-investor",
+      "description": "Archetype — Dual mandate — market-rate returns AND measurable social/environmental impact",
+      "version": "1.0.0",
+      "category": "tier2",
+      "tags": [
+        "vc",
+        "tier2",
+        "impact-investor"
+      ]
+    },
+    {
+      "name": "pre-seed-angel",
+      "source": "./plugins/pre-seed-angel",
+      "description": "Stage — Earliest conviction bet — evaluates founder, not traction",
+      "version": "1.0.0",
+      "category": "tier3",
+      "tags": [
+        "vc",
+        "tier3",
+        "pre-seed-angel"
+      ]
+    },
+    {
+      "name": "seed-investor",
+      "source": "./plugins/seed-investor",
+      "description": "Stage — First institutional check — product signals and initial PMF indicators",
+      "version": "1.0.0",
+      "category": "tier3",
+      "tags": [
+        "vc",
+        "tier3",
+        "seed-investor"
+      ]
+    },
+    {
+      "name": "series-a-partner",
+      "source": "./plugins/series-a-partner",
+      "description": "Stage — Institutional scaling — repeatable GTM, unit economics, team build-out",
+      "version": "1.0.0",
+      "category": "tier3",
+      "tags": [
+        "vc",
+        "tier3",
+        "series-a-partner"
+      ]
+    },
+    {
+      "name": "growth-investor",
+      "source": "./plugins/growth-investor",
+      "description": "Stage — Category winners at scale — market leadership, margins, and path to IPO",
+      "version": "1.0.0",
+      "category": "tier3",
+      "tags": [
+        "vc",
+        "tier3",
+        "growth-investor"
+      ]
+    },
+    {
+      "name": "silicon-valley-vc",
+      "source": "./plugins/silicon-valley-vc",
+      "description": "Region — Bay Area default — global ambition, network density, and blitzscaling bias",
+      "version": "1.0.0",
+      "category": "tier4",
+      "tags": [
+        "vc",
+        "tier4",
+        "silicon-valley-vc"
+      ]
+    },
+    {
+      "name": "latam-vc",
+      "source": "./plugins/latam-vc",
+      "description": "Region — Latin America specialist — local execution, FX risk, and leapfrog opportunities",
+      "version": "1.0.0",
+      "category": "tier4",
+      "tags": [
+        "vc",
+        "tier4",
+        "latam-vc"
+      ]
+    },
+    {
+      "name": "european-vc",
+      "source": "./plugins/european-vc",
+      "description": "Region — European deep-tech and regulation-forward investing with capital efficiency",
+      "version": "1.0.0",
+      "category": "tier4",
+      "tags": [
+        "vc",
+        "tier4",
+        "european-vc"
+      ]
+    },
+    {
+      "name": "paradigm",
+      "source": "./plugins/paradigm",
+      "description": "Paradigm — Research-driven crypto VC — infrastructure over apps, working sessions over pitches",
+      "version": "1.0.0",
+      "category": "tier5",
+      "tags": [
+        "vc",
+        "tier5",
+        "paradigm"
+      ]
+    },
+    {
+      "name": "a16z-crypto",
+      "source": "./plugins/a16z-crypto",
+      "description": "a16z Crypto — Read-Write-Own thesis — DXR Framework, token design, full-stack platform support",
+      "version": "1.0.0",
+      "category": "tier5",
+      "tags": [
+        "vc",
+        "tier5",
+        "a16z-crypto"
+      ]
+    },
+    {
+      "name": "benchmark-mode",
+      "source": "./plugins/benchmark-mode",
+      "description": "Meta — Full VC readiness assessment — 10 dimensions, scores 0-100, matches you to VCs",
+      "version": "1.0.0",
+      "category": "benchmark",
+      "tags": [
+        "vc",
+        "benchmark",
+        "benchmark-mode"
+      ]
+    }
+  ]
+}

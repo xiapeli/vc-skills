@@ -1,0 +1,19 @@
+{
+  "name": "operator-vc",
+  "version": "1.0.0",
+  "description": "Archetype — Former founder/exec who evaluates through operational lens",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier2",
+    "operator-vc"
+  ]
+}

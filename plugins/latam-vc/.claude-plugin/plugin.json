@@ -1,0 +1,19 @@
+{
+  "name": "latam-vc",
+  "version": "1.0.0",
+  "description": "Region — Latin America specialist — local execution, FX risk, and leapfrog opportunities",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier4",
+    "latam-vc"
+  ]
+}

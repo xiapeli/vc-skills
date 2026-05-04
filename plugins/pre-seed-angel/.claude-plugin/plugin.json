@@ -1,0 +1,19 @@
+{
+  "name": "pre-seed-angel",
+  "version": "1.0.0",
+  "description": "Stage — Earliest conviction bet — evaluates founder, not traction",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier3",
+    "pre-seed-angel"
+  ]
+}

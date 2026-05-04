@@ -1,0 +1,19 @@
+{
+  "name": "a16z-crypto",
+  "version": "1.0.0",
+  "description": "a16z Crypto — Read-Write-Own thesis — DXR Framework, token design, full-stack platform support",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier5",
+    "a16z-crypto"
+  ]
+}

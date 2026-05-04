@@ -1,0 +1,19 @@
+{
+  "name": "kaszek",
+  "version": "1.0.0",
+  "description": "Kaszek Ventures — LatAm-native VC from MercadoLibre founders — operator-first, $3B+ AUM",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier1",
+    "kaszek"
+  ]
+}

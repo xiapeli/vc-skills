@@ -1,0 +1,19 @@
+{
+  "name": "benchmark-mode",
+  "version": "1.0.0",
+  "description": "Meta — Full VC readiness assessment — 10 dimensions, scores 0-100, matches you to VCs",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "benchmark",
+    "benchmark-mode"
+  ]
+}

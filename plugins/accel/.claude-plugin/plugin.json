@@ -1,0 +1,19 @@
+{
+  "name": "accel",
+  "version": "1.0.0",
+  "description": "Accel — Early mover in SaaS and global expansion with prepared-mind investing",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier1",
+    "accel"
+  ]
+}

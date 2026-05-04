@@ -1,0 +1,19 @@
+{
+  "name": "product-vc",
+  "version": "1.0.0",
+  "description": "Archetype — Product intuition first — evaluates UX, retention loops, and user delight",
+  "author": {
+    "name": "xiapeli",
+    "url": "https://github.com/xiapeli/vc-skills"
+  },
+  "homepage": "https://github.com/xiapeli/vc-skills",
+  "repository": "https://github.com/xiapeli/vc-skills",
+  "license": "MIT",
+  "keywords": [
+    "vc",
+    "venture-capital",
+    "investor-simulation",
+    "tier2",
+    "product-vc"
+  ]
+}
